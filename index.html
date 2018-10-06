@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script>
+    const ws = new WebSocket("wss://miyako.xyz:8443");
+
+    ws.onopen = function() {
+      console.log("opened");
+    }
+
+    ws.onmessage = function(msg) {
+      console.log(msg);
+    }
+
+    ws.onerror = function(error) {
+      console.error(error);
+    }
+  </script>
+</head>
+
+<body>
+  
+</body>
+</html>
